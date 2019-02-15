@@ -1,0 +1,76 @@
+
+// Fonts
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+
+// Variables
+@import "variables";
+
+// Bootstrap
+@import "~bootstrap-sass/assets/stylesheets/bootstrap";
+
+
+body {
+
+	font-family: 'Montserrat', sans-serif;
+	background-color: #ffffff;
+}
+
+.jumbotron-extra {
+
+	height: 15%;
+}
+
+a.category-link,
+a.category-link:visited,
+a.category-link:active,
+a.category-link:hover {
+	
+	color: $text-color-secondary;
+	text-decoration: none;
+}
+
+.blog-post {
+
+	margin-top: 60px;
+	margin-bottom: 60px;
+}
+
+h4.title {
+
+	font-weight: bold;
+	margin-top: 5%;
+	color: #5b98a3;
+}
+
+.purple-primary {
+
+	background-color: $jumbotron
+}
+
+.simple-navigation {
+
+	padding: 30px;
+	font-size: 20px;
+
+}
+
+.prettyprint {
+
+	font-size: 18px;
+	position: relative;
+	left: 0px;
+	background-color: #f3f3f3;
+}
+
+.text-color-secondary {
+
+	color: $text-color-secondary;
+}
+
+.blog-content {
+	
+	font-size: $font-size-secondary;
+	line-height: $line-height-secondary;
+	font-weight: $font-weight-secondary;
+	padding: 30px;
+}

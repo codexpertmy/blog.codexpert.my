@@ -38,20 +38,21 @@ class HomeController extends Controller
      */
     public function store(Request $request)
     {
+
         $this->validate($request, [
-            'title'     => 'required',
+            'title' => 'required',
             'sub_title' => 'required',
-            'body'      => 'required',
+            'body' => 'required',
         ]);
 
         $seoKeywords = explode(' ', $request->input('seo_keywords'));
         $post = Post::create([
-            'user_id'      => auth()->user()->getAuthIdentifier(),
-            'title'        => $request->get('title'),
-            'sub_title'    => $request->get('sub_title'),
-            'category_id'  => $request->get('category_id'),
-            'published'    => $request->get('published'),
-            'body'         => $request->get('body'),
+            'user_id' => auth()->user()->getAuthIdentifier(),
+            'title' => $request->get('title'),
+            'sub_title' => $request->get('sub_title'),
+            'category_id' => $request->get('category_id'),
+            'published' => $request->get('published'),
+            'body' => $request->get('body'),
             'seo_keywords' => $seoKeywords,
         ]);
 
@@ -68,7 +69,7 @@ class HomeController extends Controller
     }
 
     /**
-     * @param Request $request
+     * @param Request   $request
      * @param $hashId
      */
     public function update(Request $request, $hashId)

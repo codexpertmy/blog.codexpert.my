@@ -53,7 +53,7 @@
 
                        <div class="form-group">
                             <label for="">Article</label>
-                            <textarea name="body" id="" class="form-control" cols="30" rows="10" style="resize: none; height: 400px;">{{ $post->body ?? null }}</textarea>
+                            <textarea name="body" id="summernote" class="form-control">{{ $post->body ?? null }}</textarea>
                              @if($errors->any()) <p class="text-danger">{{ $errors->first('body')}}</p> @endif
                        </div>
 
@@ -66,4 +66,13 @@
         </div>
     </div>
 </div>
+
+<script>
+  $(function(){
+     $('#summernote').summernote({
+       height: 400,
+       focus: true,
+     });
+  })
+</script>
 @endsection
